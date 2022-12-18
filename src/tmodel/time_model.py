@@ -8,7 +8,7 @@ from abc import ABC
 class Tmodel(ABC):
     def __init__(self) -> None:
         self.model = XGBRegressor()                                     # Model initialization
-        self.model.load_model('tmodel/models/m_v_0_final.model')             # Load model configs
+        self.model.load_model('src/tmodel/models/m_v_0_final.model')             # Load model configs
         self.fact_time = 0               # Время фактического прибытия от пользователя
         self.penalty = 0                 # Штраф показателей модели
 
