@@ -15,7 +15,7 @@ def run():
         stub = RoutesAnalysis_pb2_grpc.RoutesAnalysisStub(channel)
         response = stub.Analyse(
             RoutesAnalysis_pb2.AnalyseRequest(
-                cargo_filled=1,
+                cargo_filled=6,
                 cargo_total=10,
                 distance=10,
                 timestamp=141442

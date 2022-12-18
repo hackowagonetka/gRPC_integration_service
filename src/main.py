@@ -16,15 +16,20 @@ class Routes(RoutesAnalysis_pb2_grpc.RoutesAnalysisServicer):
     def Analyse(self, request, context):
         date = request.timestamp
         date = datetime.fromtimestamp(date)
+        week = date.isocalendar()[1]
         model = Tmodel()
+        if request.cargo_filled * 2 > request.cargo_total:
+            is_train_filled = 1
+        else:
+            is_train_filled = 0
         params = [
                 date.year,
                 date.month,
+                week,
                 date.day,
                 date.hour,
                 request.distance,
-                request.cargo_total,
-                request.cargo_filled
+                is_train_filled
             ]
         time_spent = model.predict(params)
         return RoutesAnalysis_pb2.AnalyseResponse(
