@@ -11,7 +11,7 @@ message AnalyseRequest {
 }
 
 message AnalyseResponse {
-    int64 time_spent = 1; // затраченное время в минутах
+    float time_spent = 1; // затраченное время в минутах
 }
 
 service RoutesAnalysis {

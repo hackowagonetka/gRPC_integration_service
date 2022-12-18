@@ -1,17 +1,34 @@
+from datetime import datetime
 from concurrent import futures
 import logging
 
 import grpc
+
 from grpc_generated_files import (
     RoutesAnalysis_pb2,
     RoutesAnalysis_pb2_grpc
+
 )
+from tmodel.time_model import Tmodel
 
 
 class Routes(RoutesAnalysis_pb2_grpc.RoutesAnalysisServicer):
     def Analyse(self, request, context):
+        date = request.timestamp
+        date = datetime.fromtimestamp(date)
+        model = Tmodel()
+        params = [
+                date.year,
+                date.month,
+                date.day,
+                date.hour,
+                request.distance,
+                request.cargo_total,
+                request.cargo_filled
+            ]
+        time_spent = model.predict(params)
         return RoutesAnalysis_pb2.AnalyseResponse(
-            time_spent=444
+            time_spent=time_spent[0]
         )
 
 

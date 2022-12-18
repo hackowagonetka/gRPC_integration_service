@@ -19,5 +19,5 @@ class AnalyseRequest(_message.Message):
 class AnalyseResponse(_message.Message):
     __slots__ = ["time_spent"]
     TIME_SPENT_FIELD_NUMBER: _ClassVar[int]
-    time_spent: int
-    def __init__(self, time_spent: _Optional[int] = ...) -> None: ...
+    time_spent: float
+    def __init__(self, time_spent: _Optional[float] = ...) -> None: ...

@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14RoutesAnalysis.proto\x12\x0froutes_analysis\"`\n\x0e\x41nalyseRequest\x12\x10\n\x08\x64istance\x18\x01 \x01(\x03\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x13\n\x0b\x63\x61rgo_total\x18\x03 \x01(\x05\x12\x14\n\x0c\x63\x61rgo_filled\x18\x04 \x01(\x05\"%\n\x0f\x41nalyseResponse\x12\x12\n\ntime_spent\x18\x01 \x01(\x03\x32^\n\x0eRoutesAnalysis\x12L\n\x07\x41nalyse\x12\x1f.routes_analysis.AnalyseRequest\x1a .routes_analysis.AnalyseResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x14RoutesAnalysis.proto\x12\x0froutes_analysis\"`\n\x0e\x41nalyseRequest\x12\x10\n\x08\x64istance\x18\x01 \x01(\x03\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x13\n\x0b\x63\x61rgo_total\x18\x03 \x01(\x05\x12\x14\n\x0c\x63\x61rgo_filled\x18\x04 \x01(\x05\"%\n\x0f\x41nalyseResponse\x12\x12\n\ntime_spent\x18\x01 \x01(\x02\x32^\n\x0eRoutesAnalysis\x12L\n\x07\x41nalyse\x12\x1f.routes_analysis.AnalyseRequest\x1a .routes_analysis.AnalyseResponseb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'RoutesAnalysis_pb2', globals())
