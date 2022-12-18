@@ -17,8 +17,8 @@ def run():
             RoutesAnalysis_pb2.AnalyseRequest(
                 cargo_filled=6,
                 cargo_total=10,
-                distance=10,
-                timestamp=141442
+                distance=15000,
+                timestamp=1671349762
             )
         )
     print(f"Client received: {response}")

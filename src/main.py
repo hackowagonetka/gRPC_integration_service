@@ -28,8 +28,8 @@ class Routes(RoutesAnalysis_pb2_grpc.RoutesAnalysisServicer):
                 week,
                 date.day,
                 date.hour,
+                is_train_filled,
                 request.distance,
-                is_train_filled
             ]
         time_spent = model.predict(params)
         return RoutesAnalysis_pb2.AnalyseResponse(
